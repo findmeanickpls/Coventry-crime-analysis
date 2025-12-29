@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coventry Crime Hotspot Analysis – Interactive Maps</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.8em;
+        }
+        h2 {
+            color: #2a5298;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9fbff;
+            border-left: 6px solid #2a5298;
+            border-radius: 6px;
+            transition: transform 0.2s;
+        }
+        li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #1e3c72;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Coventry Crime Hotspot Analysis</h1>
+        <p>MSc Dissertation Project – 2025</p>
+    </header>
+
+    <div class="container">
+        <h2>Interactive Maps</h2>
+        <p>This site hosts interactive Folium maps developed as part of an analysis of crime patterns in Coventry (2018–2025), with a focus on the impact of the 2021 UK City of Culture designation.</p>
+        
+        <ul>
+            <li>
+                <a href="/crime analysis/map/coventry_total_crime_interactive_map.html">
+                    Total Recorded Crimes by LSOA (2018–2025)
+                </a><br>
+                <small>Choropleth map showing cumulative crime counts across the study period.</small>
+            </li>
+            <li>
+                <a href="/crime analysis/map/coventry_kmeans_clusters_2019.html">
+                    K-Means Clustering of Crime & Deprivation (2019)
+                </a><br>
+                <small>Three clusters: low, moderate, and high deprivation/crime areas.</small>
+            </li>
+            <li>
+                <a href="/crime analysis/map/DBSCAN_clusters_2019.html">
+                    DBSCAN Density Clustering & Outliers (2019)
+                </a><br>
+                <small>Density-based clustering highlighting core hotspots and situational outliers near nightlife venues.</small>
+            </li>
+            <li>
+                <a href="/crime analysis/map/coventry_predicted_hotspots_2019.html">
+                    Random Forest Predicted High-Risk Hotspots (2019)
+                </a><br>
+                <small>Machine learning predictions for violence and sexual offences risk.</small>
+            </li>
+        </ul>
+
+        <p>For full methodology, results, and discussion, please refer to the dissertation document.</p>
+    </div>
+
+    <footer>
+        <p>© 2025 [Your Name] – MSc Dissertation Project</p>
+    </footer>
+</body>
+</html>
