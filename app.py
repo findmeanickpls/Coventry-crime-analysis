@@ -7,7 +7,7 @@ from streamlit.components.v1 import html as st_html  # Fixed import
 # Load the trained Random Forest model
 @st.cache_resource
 def load_model():
-    return joblib.load('/Users/deen/Desktop/crime analysis/rf_model.pkl')
+    return joblib.load('rf_model.pkl')
     
 rf_model = load_model()
 
@@ -30,21 +30,21 @@ def embed_map(html_file, height=700):
         
 if page == "Total Crime Map":
     st.header("Total Recorded Crimes by LSOA (2018–2025)")
-    embed_map("/Users/Deen/Desktop/crime analysis/map/coventry_total_crime_interactive_map.html")
+    embed_map("map/coventry_total_crime_interactive_map.html")
 
 elif page == "K-Means Clustering":
     st.header("K-Means Clustering of Crime & Deprivation (2019)")
-    embed_map("/Users/Deen/Desktop/crime analysis/map/coventry_kmeans_clusters_2019.html")
+    embed_map("map/coventry_kmeans_clusters_2019.html")
 
 elif page == "DBSCAN Clustering":
     st.header("DBSCAN Density Clustering & Outliers (2019)")
     st.write("Outliers (light cyan) often near nightlife venues – see Appendix for OSM examples.")
-    embed_map("/Users/Deen/Desktop/crime analysis/map/DBSCAN_clusters_2019.html")
+    embed_map("map/DBSCAN_clusters_2019.html")
     
         
 elif page == "Random Forest Prediction Map":
     st.header("Random Forest Predicted High-Risk Hotspots (2019 Violence & Sexual Offences)")
-    embed_map("/Users/Deen/Desktop/crime analysis/map/coventry_predicted_hotspots_2019.html")
+    embed_map("map/coventry_predicted_hotspots_2019.html")
 
 elif page == "Predict Crime Risk":
     st.header("Predict if an LSOA is High-Risk (Random Forest)")
