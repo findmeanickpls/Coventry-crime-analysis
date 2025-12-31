@@ -1,12 +1,6 @@
 import streamlit as st
 import pandas as pd
-import geopandas as gpd
-import folium
-from streamlit_folium import st_folium
-from sklearn.ensemble import RandomForestClassifier
 import joblib  # For loading my saved RF model
-import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans, DBSCAN
 from streamlit.components.v1 import html as st_html  # Fixed import
 
 
