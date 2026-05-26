@@ -1,3 +1,5 @@
-.ipynb_checkpoints/
-.ipynb_checkpoints/
-*.html # optional: ignore exported HTML too
+.DS_Store
+.Rhistory
+cache/
+__pycache__/
+*.pyc
